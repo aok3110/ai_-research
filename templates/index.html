@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Company Research Assistant</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <!-- Header -->
+
+    <div class="text-center mb-4">
+
+        <h1 class="fw-bold display-6">
+            🤖 AI Company Research Assistant
+        </h1>
+
+        <p class="text-secondary mb-0">
+            Powered by OpenRouter • Serper.dev • Intelligent Website Crawling
+        </p>
+
+    </div>
+
+    <!-- Chat -->
+
+    <div class="chat-box shadow-sm" id="chatBox">
+
+        <div class="message ai">
+
+            <h5>👋 Welcome</h5>
+
+            <p class="mb-0">
+                Enter a company name or website URL to begin your AI-powered research.
+            </p>
+
+            <small class="text-muted">
+                Examples:
+                Tesla • Microsoft • Stripe • https://tesla.com
+            </small>
+
+        </div>
+
+    </div>
+
+    <!-- Search -->
+
+    <div class="input-group mt-4 shadow-sm">
+
+        <span class="input-group-text bg-white">
+            🔍
+        </span>
+
+        <input
+            id="companyInput"
+            type="text"
+            class="form-control"
+            placeholder="Search a company (Tesla, Microsoft or https://company.com)"
+            autocomplete="off">
+
+        <button
+            class="btn btn-primary px-4"
+            id="researchBtn">
+
+            🔎 Research
+
+        </button>
+
+    </div>
+
+    <small class="text-muted mt-2 d-block">
+        Press <b>Enter</b> to start searching.
+    </small>
+
+    <!-- PDF -->
+
+    <div class="text-center mt-4">
+
+        <a
+            id="pdfBtn"
+            class="btn btn-success d-none"
+            target="_blank">
+
+            📄 Download PDF Report
+
+        </a>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
